@@ -1,138 +1,220 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plan d’Action UCASM</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
-            background-color: #f9f9f9;
-            color: #333;
-        }
-        h1, h2 {
-            color: #2c3e50;
-        }
-        h1 {
-            font-size: 2em;
-            margin-bottom: 0.5em;
-        }
-        h2 {
-            font-size: 1.5em;
-            margin-top: 1.5em;
-        }
-        ul {
-            margin: 0.5em 0 1em 1.5em;
-        }
-        li {
-            margin-bottom: 0.5em;
-        }
-        hr {
-            border: none;
-            border-top: 2px solid #ccc;
-            margin: 2em 0;
-        }
-        .emoji {
-            margin-right: 0.3em;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plan d’Action UCASM - Slider</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background: #f9f9f9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .slider {
+        width: 90%;
+        max-width: 900px;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        overflow: hidden;
+        position: relative;
+    }
+    .slides {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+        width: 600%;
+    }
+    .slide {
+        min-width: 100%;
+        padding: 30px;
+        box-sizing: border-box;
+    }
+    h2 {
+        margin-top: 0;
+        color: #2c3e50;
+    }
+    ul {
+        margin-left: 1.5em;
+    }
+    li {
+        margin-bottom: 0.5em;
+    }
+    .nav-buttons {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        transform: translateY(-50%);
+        pointer-events: none;
+    }
+    .nav-buttons button {
+        background: rgba(0,0,0,0.5);
+        border: none;
+        color: #fff;
+        font-size: 2em;
+        padding: 10px 15px;
+        cursor: pointer;
+        pointer-events: all;
+        border-radius: 50%;
+    }
+    .dots {
+        text-align: center;
+        padding: 10px 0;
+        background: #f0f0f0;
+    }
+    .dot {
+        height: 12px;
+        width: 12px;
+        margin: 0 5px;
+        display: inline-block;
+        background: #bbb;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    .dot.active {
+        background: #2c3e50;
+    }
+    a.external {
+        color: #2980b9;
+        text-decoration: underline;
+    }
+</style>
 </head>
 <body>
 
-    <h1>🎯 Plan d’Action UCASM – Relance Admissions & Refonte du Site</h1>
-    <hr>
-
-    <h2>📝 1. Analyse et Préparation <em>(Semaine 1)</em></h2>
-    <ul>
-        <li><strong>Audit du site</strong> (<code>ucasm-ci.org</code> & <code>universite.ucasm-ci.org</code>)
+<div class="slider">
+    <div class="slides">
+        <div class="slide">
+            <h2>📝 1. Analyse et Préparation (Semaine 1)</h2>
             <ul>
-                <li>Performances, mobile, SEO</li>
-                <li>Navigation et expérience utilisateur</li>
+                <li><strong>Audit du site</strong> (<a href="https://ucasm-ci.org" class="external" target="_blank">ucasm-ci.org</a> & <a href="https://universite.ucasm-ci.org" class="external" target="_blank">universite.ucasm-ci.org</a>)
+                    <ul>
+                        <li>Performances, mobile, SEO</li>
+                        <li>Navigation et expérience utilisateur</li>
+                    </ul>
+                </li>
+                <li><strong>Benchmark</strong> d’universités performantes (ex. <a href="https://iugb.edu.sn/" class="external" target="_blank">IUGB</a>)</li>
+                <li><strong>Optimisation contenu</strong> : textes clairs et orientés conversion</li>
+                <li><strong>Parcours candidat</strong> : Application → Paiement → Confirmation</li>
             </ul>
-        </li>
-        <li><strong>Benchmark</strong> d’universités performantes (ex. IUGB)</li>
-        <li><strong>Optimisation contenu</strong> : textes clairs et orientés conversion</li>
-        <li><strong>Parcours candidat</strong> : Application → Paiement → Confirmation</li>
-    </ul>
+        </div>
 
-    <hr>
-
-    <h2>💻 2. Refonte du Site <em>(Semaines 2 à 4)</em></h2>
-    <ul>
-        <li><strong>Nouvelle architecture</strong> inspirée du sitemap IUGB</li>
-        <li><strong>Section Application en ligne</strong>
+        <div class="slide">
+            <h2>💻 2. Refonte du Site (Semaines 2 à 4)</h2>
             <ul>
-                <li>Formulaire dynamique avec upload de documents</li>
-                <li>Paiement intégré via <strong>CinetPay</strong> (OM, MTN, Wave, CB)</li>
-                <li>Confirmation email/SMS automatisée</li>
+                <li><strong>Nouvelle architecture</strong> inspirée du sitemap IUGB</li>
+                <li><strong>Section Application en ligne</strong>
+                    <ul>
+                        <li>Formulaire dynamique avec upload de documents</li>
+                        <li>Paiement intégré via <a href="https://cinetpay.com" class="external" target="_blank">CinetPay</a> (OM, MTN, Wave, CB)</li>
+                        <li>Confirmation email/SMS automatisée</li>
+                    </ul>
+                </li>
+                <li><strong>Améliorations techniques</strong>
+                    <ul>
+                        <li>Design responsive</li>
+                        <li>Optimisation SEO & Google PageSpeed</li>
+                        <li>Sécurité HTTPS & sauvegardes automatiques</li>
+                        <li>Google Analytics + Facebook Pixel</li>
+                    </ul>
+                </li>
             </ul>
-        </li>
-        <li><strong>Améliorations techniques</strong>
+        </div>
+
+        <div class="slide">
+            <h2>💳 3. Paiement en Ligne (Semaine 3)</h2>
             <ul>
-                <li>Design responsive</li>
-                <li>Optimisation SEO & Google PageSpeed</li>
-                <li>Sécurité HTTPS & sauvegardes automatiques</li>
-                <li>Google Analytics + Facebook Pixel</li>
+                <li>Ouverture compte marchand <a href="https://cinetpay.com" class="external" target="_blank">CinetPay</a></li>
+                <li>Configuration des moyens de paiement</li>
+                <li>Tests de transactions réelles</li>
+                <li>Intégration avec le formulaire d’inscription</li>
             </ul>
-        </li>
-    </ul>
+        </div>
 
-    <hr>
-
-    <h2>💳 3. Paiement en Ligne <em>(Semaine 3)</em></h2>
-    <ul>
-        <li>Ouverture compte marchand CinetPay</li>
-        <li>Configuration des moyens de paiement</li>
-        <li>Tests de transactions réelles</li>
-        <li>Intégration avec le formulaire d’inscription</li>
-    </ul>
-
-    <hr>
-
-    <h2>📢 4. Campagne Digitale <em>(Semaines 4 à 8)</em></h2>
-    <ul>
-        <li><strong>Publicité ciblée</strong>
+        <div class="slide">
+            <h2>📢 4. Campagne Digitale (Semaines 4 à 8)</h2>
             <ul>
-                <li>Google Ads : mots-clés enseignement supérieur</li>
-                <li>Facebook/Instagram Ads : témoignages + photos campus</li>
-                <li>YouTube Ads : vidéo 30 sec des filières UCASM</li>
+                <li><strong>Publicité ciblée</strong>
+                    <ul>
+                        <li>Google Ads : mots-clés enseignement supérieur</li>
+                        <li>Facebook/Instagram Ads : témoignages + photos campus</li>
+                        <li>YouTube Ads : vidéo 30 sec des filières UCASM</li>
+                    </ul>
+                </li>
+                <li><strong>Emailing automatisé</strong>
+                    <ul>
+                        <li>Relance J+1 : rappel inscription</li>
+                        <li>Relance J+3 : avantages UCASM</li>
+                    </ul>
+                </li>
+                <li><strong>Réseaux sociaux</strong>
+                    <ul>
+                        <li>Vidéos courtes, témoignages, annonces d’admissions</li>
+                        <li>Stories Instagram & Facebook</li>
+                    </ul>
+                </li>
             </ul>
-        </li>
-        <li><strong>Emailing automatisé</strong>
+        </div>
+
+        <div class="slide">
+            <h2>📊 5. Suivi et Optimisation (Semaines 5 à 8)</h2>
             <ul>
-                <li>Relance J+1 : rappel inscription</li>
-                <li>Relance J+3 : avantages UCASM</li>
+                <li>Analyse Google Analytics + Facebook Ads Manager</li>
+                <li>Optimisation des annonces et du parcours</li>
+                <li>Support rapide via WhatsApp Business</li>
+                <li>Rapport hebdomadaire : inscriptions & paiements</li>
             </ul>
-        </li>
-        <li><strong>Réseaux sociaux</strong>
+        </div>
+
+        <div class="slide">
+            <h2>✅ 6. Résultats Attendus</h2>
             <ul>
-                <li>Vidéos courtes, témoignages, annonces d’admissions</li>
-                <li>Stories Instagram & Facebook</li>
+                <li>Hausse du taux d’inscriptions confirmées</li>
+                <li>Processus simplifié pour étudiants</li>
+                <li>Paiement en ligne rapide et sécurisé</li>
+                <li>Image moderne et crédible de l’UCASM</li>
             </ul>
-        </li>
-    </ul>
+        </div>
+    </div>
 
-    <hr>
+    <div class="nav-buttons">
+        <button id="prev">&#10094;</button>
+        <button id="next">&#10095;</button>
+    </div>
+    <div class="dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+</div>
 
-    <h2>📊 5. Suivi et Optimisation <em>(Semaines 5 à 8)</em></h2>
-    <ul>
-        <li>Analyse Google Analytics + Facebook Ads Manager</li>
-        <li>Optimisation des annonces et du parcours</li>
-        <li>Support rapide via WhatsApp Business</li>
-        <li>Rapport hebdomadaire : inscriptions & paiements</li>
-    </ul>
+<script>
+    const slides = document.querySelector('.slides');
+    const slideCount = document.querySelectorAll('.slide').length;
+    const dots = document.querySelectorAll('.dot');
+    let index = 0;
 
-    <hr>
+    function showSlide(i) {
+        if (i >= slideCount) index = 0;
+        else if (i < 0) index = slideCount - 1;
+        else index = i;
+        slides.style.transform = `translateX(${-index * 100}%)`;
+        dots.forEach(dot => dot.classList.remove('active'));
+        dots[index].classList.add('active');
+    }
 
-    <h2>✅ 6. Résultats Attendus</h2>
-    <ul>
-        <li>Hausse du taux d’inscriptions confirmées</li>
-        <li>Processus simplifié pour étudiants</li>
-        <li>Paiement en ligne rapide et sécurisé</li>
-        <li>Image moderne et crédible de l’UCASM</li>
-    </ul>
+    document.getElementById('prev').addEventListener('click', () => showSlide(index - 1));
+    document.getElementById('next').addEventListener('click', () => showSlide(index + 1));
+    dots.forEach((dot, i) => dot.addEventListener('click', () => showSlide(i)));
+</script>
 
 </body>
 </html>
