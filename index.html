@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Plan d’Action</title>
+<title>Plan d’Action UCASM - Slider</title>
 <style>
 body {
     font-family: Arial, sans-serif;
@@ -12,9 +12,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
 }
-
 .slider {
     width: 90%;
     max-width: 900px;
@@ -24,23 +23,19 @@ body {
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     position: relative;
 }
-
 .slides-wrapper {
     display: flex;
     transition: transform 0.6s ease-in-out;
 }
-
 .slide {
     min-width: 100%;
     padding: 30px;
     box-sizing: border-box;
 }
-
 h2 { color: #2c3e50; margin-top: 0; }
 ul { margin-left: 1.5em; }
 li { margin-bottom: 0.5em; }
 a.external { color: #2980b9; text-decoration: underline; }
-
 .nav-buttons {
     position: absolute;
     top: 50%;
@@ -49,23 +44,20 @@ a.external { color: #2980b9; text-decoration: underline; }
     justify-content: space-between;
     transform: translateY(-50%);
 }
-
 .nav-buttons button {
     background: rgba(0,0,0,0.5);
     border: none;
     color: #fff;
     font-size: 2em;
-    padding: 10px 15px;
+    padding: 10px;
     cursor: pointer;
     border-radius: 50%;
 }
-
 .dots {
     text-align: center;
     padding: 10px 0;
     background: #f0f0f0;
 }
-
 .dot {
     height: 12px;
     width: 12px;
@@ -75,7 +67,6 @@ a.external { color: #2980b9; text-decoration: underline; }
     border-radius: 50%;
     cursor: pointer;
 }
-
 .dot.active {
     background: #2c3e50;
 }
@@ -85,6 +76,7 @@ a.external { color: #2980b9; text-decoration: underline; }
 
 <div class="slider">
     <div class="slides-wrapper">
+        <!-- Slide 1 -->
         <div class="slide">
             <h2>📝 1. Analyse et Préparation (Semaine 1)</h2>
             <ul>
@@ -99,7 +91,7 @@ a.external { color: #2980b9; text-decoration: underline; }
                 <li><strong>Parcours candidat</strong> : Application → Paiement → Confirmation</li>
             </ul>
         </div>
-
+        <!-- Slide 2 -->
         <div class="slide">
             <h2>💻 2. Refonte du Site (Semaines 2 à 4)</h2>
             <ul>
@@ -121,7 +113,7 @@ a.external { color: #2980b9; text-decoration: underline; }
                 </li>
             </ul>
         </div>
-
+        <!-- Slide 3 -->
         <div class="slide">
             <h2>💳 3. Paiement en Ligne (Semaine 3)</h2>
             <ul>
@@ -131,7 +123,7 @@ a.external { color: #2980b9; text-decoration: underline; }
                 <li>Intégration avec le formulaire d’inscription</li>
             </ul>
         </div>
-
+        <!-- Slide 4 -->
         <div class="slide">
             <h2>📢 4. Campagne Digitale (Semaines 4 à 8)</h2>
             <ul>
@@ -156,7 +148,7 @@ a.external { color: #2980b9; text-decoration: underline; }
                 </li>
             </ul>
         </div>
-
+        <!-- Slide 5 -->
         <div class="slide">
             <h2>📊 5. Suivi et Optimisation (Semaines 5 à 8)</h2>
             <ul>
@@ -166,7 +158,7 @@ a.external { color: #2980b9; text-decoration: underline; }
                 <li>Rapport hebdomadaire : inscriptions & paiements</li>
             </ul>
         </div>
-
+        <!-- Slide 6 -->
         <div class="slide">
             <h2>✅ 6. Résultats Attendus</h2>
             <ul>
